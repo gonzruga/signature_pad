@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--<html lang="en">-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>Customer Signature</title>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+   <link rel="stylesheet" th:href="@{/css/signature-pad.css}">
+
+</head>
+<body>
+
+<p th:text="'After you have inspected the goods, if there is no problem please sign below. If there is a problem call customer support.'" />
+
+
+<form class="signature-pad-form" action="#" method="POST" >
+
+<canvas class="signature-pad" width="250" height="200" >
+</canvas>
+<!--    id="myCanvas"-->
+</form>
+
+
+<p th:text="'By signing here you confirm that you have inspected the item(s) you ordered and are satisfied by their condition.'" />
+
+<input type="submit" class="submit-button" value="Submit Signature">
+
+<input type="button" class="clear-button" value="Clear Signature">
+
+<script th:src="@{/js/signature.js}"></script>
+
+
+</body>
+</html>

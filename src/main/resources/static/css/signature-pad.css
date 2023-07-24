@@ -1,0 +1,24 @@
+body {
+    background: #a6ff00;
+    overflow-x: hidden;
+}
+
+.signature-pad-form{
+    touch-action: none;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.signature-pad {
+    /*Image not imported*/
+    cursor: url("../images/pen.jpg") 1 26, pointer;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background: #f7f7f7;
+}
+
+@media (pointer: coarse) {
+    body {
+        overflow: hidden; /* Needed ot prevent vertical scroll */
+    }
+}
